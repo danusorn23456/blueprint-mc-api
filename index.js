@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require("cors");
 const nbt = require('prismarine-nbt');
 const multer = require("multer")
 
@@ -6,6 +7,8 @@ const app = express();
 const PORT = process.env.PORT || 8081;
 
 const upload = multer({ storage: multer.memoryStorage() });
+
+app.use(cors());
 
 app.get('/', (req, res) => {
     res.send("<h1>welcome to blueprint mc api</h1>")
