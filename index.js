@@ -24,3 +24,5 @@ app.listen(port, () => {
     console.log(`Listening at ${port}`);
 });
 //#endregion
+
+module.exports = app
